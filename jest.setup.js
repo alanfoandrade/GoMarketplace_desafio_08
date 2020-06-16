@@ -5,7 +5,7 @@ jest.mock(
   () => {
     const { TouchableHighlight } = require('react-native'); // eslint-disable-line
 
-    const MockTouchable = props => {
+    const MockTouchable = (props) => {
       return <TouchableHighlight {...props} />;
     };
 

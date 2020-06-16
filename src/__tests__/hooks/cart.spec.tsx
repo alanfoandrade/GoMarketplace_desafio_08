@@ -62,7 +62,7 @@ const TestComponent: React.FC = () => {
         Decrement
       </TouchableOpacity>
 
-      {products.map(product => (
+      {products.map((product) => (
         <View key={product.id}>
           <Text>{product.title}</Text>
           <Text>{product.quantity}</Text>
@@ -139,7 +139,7 @@ describe('Cart Context', () => {
 
   it('should load products from AsyncStorage', async () => {
     mockedAsyncStorage.getItem.mockReturnValue(
-      new Promise(resolve =>
+      new Promise((resolve) =>
         resolve(
           JSON.stringify([
             {
